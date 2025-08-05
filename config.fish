@@ -13,3 +13,4 @@ alias api='atac'
 alias sql='lazysql'
 
 zoxide init fish | source
+starship init fish | source

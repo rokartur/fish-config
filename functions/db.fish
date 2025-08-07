@@ -12,7 +12,7 @@ function db
     if test -d $db_dir
         echo "Database '$display_name' already exists. Entering directory and launching drizzle-kit studio..."
         z $db_dir
-        bun drizzle-kit studio; and z $DB_ORIGINAL_DIR; or z $DB_ORIGINAL_DIR
+        bun update && bun drizzle-kit studio; and z $DB_ORIGINAL_DIR; or z $DB_ORIGINAL_DIR
         return 0
     end
 
@@ -42,7 +42,7 @@ function db
     bun a drizzle-orm pg >/dev/null 2>&1
     bun a -d drizzle-kit >/dev/null 2>&1
 
-    bun drizzle-kit studio; and z $DB_ORIGINAL_DIR; or z $DB_ORIGINAL_DIR
+    bun update && bun drizzle-kit studio; and z $DB_ORIGINAL_DIR; or z $DB_ORIGINAL_DIR
 end
 
 function fish_preexec --on-event fish_preexec

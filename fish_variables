@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOCKER_HOST:unix\x3a///var/folders/ht/14vnv1l95zl6zg5zlsn5x3lr0000gn/T/podman/podman\x2dmachine\x2ddefault\x2dapi\x2esock
 SETUVAR --export --path PATH:\x1d
+SETUVAR --export PODMAN_COMPOSE_WARNING_LOGS:false
 SETUVAR Z_DATA_DIR:/Users/artur/\x2elocal/share/z
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_upgraded_to_4_4:\x1d

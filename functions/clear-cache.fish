@@ -33,7 +33,10 @@ function clear-cache
         "$HOME/Library/Group Containers/group.com.apple.gamecenter" \
         "$HOME/Library/Group Containers/243LU875E5.groups.com.apple.podcasts" \
         "$HOME/Library/Group Containers/group.com.apple.notes" \
-        "$HOME/Library/Group Containers/group.com.apple.news"
+        "$HOME/Library/Group Containers/group.com.apple.news" \
+	"$HOME/Library/Caches/com.apple.iTunes" \
+	"$HOME/Library/Caches/com.apple.Music" \
+	"$HOME/Library/Caches/GeoServices"
 
     # "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/Service Worker" \
 
@@ -42,7 +45,7 @@ function clear-cache
     set -l red    (set_color red)
     set -l normal (set_color normal)
 
-    print_header "Cache Cleanup"
+    print-header "Cache Cleanup"
 
     echo "$yellow Starting folder cleanup... $normal"
     echo " Number of folders to process: "(count $folders_to_delete)
@@ -70,7 +73,7 @@ function clear-cache
         end
     end
 
-    print_header "Summary"
+    print-header "Summary"
     printf " Folders moved to trash: %s%s%s\n" $green $deleted_count $normal
     printf " Folders not found:      %s%s%s\n" $yellow $missing_count $normal
     printf " Total processed:        %s\n" (count $folders_to_delete)

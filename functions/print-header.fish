@@ -1,4 +1,4 @@
-function print_header
+function print-header
     set -l line_width 70
 
     set -l now (date +"%H:%M:%S")

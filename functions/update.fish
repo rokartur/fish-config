@@ -11,7 +11,7 @@ function update
     set -l normal (set_color normal)
 
     # Update bun
-    print_header "bun"
+    print-header "bun"
     if type -q bun
         if bun upgrade
             set status_bun "ok"
@@ -24,7 +24,7 @@ function update
     end
 
     # Update homebrew
-    print_header "homebrew"
+    print-header "homebrew"
     if type -q brew
         if brew update; and brew upgrade; and brew cleanup -s; and brew doctor
             set status_homebrew "ok"
@@ -37,7 +37,7 @@ function update
     end
 
     # Summary
-    print_header "Summary"
+    print-header "Summary"
     printf " bun:            %s%s%s\n" \
         (test "$status_bun" = "ok"; and echo $green; or echo $red) \
         "$status_bun" \

@@ -11,6 +11,7 @@ function clear-cache
         "$HOME/Library/Application Support/Code/CachedProfilesData" \
         "$HOME/Library/Application Support/Code/Code Cache" \
         "$HOME/Library/Application Support/Code/GPUCache" \
+	"$HOME/Library/Application Support/Code/logs" \
         "$HOME/Library/Caches/BraveSoftware" \
         "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/extensions_crx_cache" \
         "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/component_crx_cache" \
